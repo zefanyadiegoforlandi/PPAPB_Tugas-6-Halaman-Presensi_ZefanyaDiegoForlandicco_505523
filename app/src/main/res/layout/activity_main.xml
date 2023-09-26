@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="17dp"
+    android:paddingBottom="17dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="32dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        tools:context=".MainActivity">
+
+        <!-- Judul "Presensi" -->
+        <TextView
+            android:id="@+id/new_presensi_id"
+            style="@style/heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presensi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <!-- CardView untuk CalendarView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_cardView_calendar_id"
+            style="@style/cardViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/new_cardView_timepicker_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_presensi_id"
+            app:layout_constraintVertical_bias="1.0">
+
+            <!-- CalendarView -->
+            <CalendarView
+                android:id="@+id/new_datePicker_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:datePickerMode="calendar" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView untuk TimePicker -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_cardView_timepicker_id"
+            style="@style/cardViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/new_spinner_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- TimePicker -->
+            <TimePicker
+                android:id="@+id/new_timePicker_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:timePickerMode="spinner"
+                app:layout_constraintBottom_toTopOf="@+id/new_spinner_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/new_spinner_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:background="@drawable/stylbentuk"
+            android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/new_submit_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Tombol "Submit" -->
+        <Button
+            android:id="@+id/new_submit_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bentukbtn"
+            android:text="Submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- EditText "Keterangan" -->
+        <EditText
+            android:id="@+id/new_keterangan_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bsbentuk"
+            android:ems="10"
+            android:hint="Keterangan"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="#828282"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/new_submit_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="cardViewStyle">
+        <item name="cardCornerRadius">15dp</item>
+    </style>
+    <style name="mainFont">
+        <item name="android:fontFamily">"@font/poppins_bold"</item>
+    </style>
+    <style name="heading1" parent="mainFont">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="secondaryFont">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

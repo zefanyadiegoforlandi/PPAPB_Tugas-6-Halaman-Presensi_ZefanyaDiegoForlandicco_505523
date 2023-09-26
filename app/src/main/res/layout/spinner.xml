@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:padding="3dp"
+    android:textColor="#FF989696"
+    android:gravity="left">
+</TextView>
+
+<!--
+android:layout_width="match_parent" Lebar TextView akan mencakup seluruh lebar parent/container.
+    android:layout_height="wrap_content"  Tinggi TextView akan menyesuaikan dengan ukuran teks yang ditampilkan.
+    android:textSize="16sp"  Ukuran teks dalam skala piksel yang independen dari resolusi layar (sp).
+    android:padding="3dp" Ruang tambahan sebesar 3 piksel akan diberikan di sekitar teks dalam TextView.
+    android:textColor="#FF989696"  Warna teks dalam format hexadecimal.
+    android:gravity="left">  Posisi teks dalam TextView akan disetel ke kiri (kiri-terkait). -->
